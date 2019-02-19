@@ -54,6 +54,7 @@ case "1":
         formatter.dateFormat="dd-MM-yyyy"
         let currdate=formatter.string(from: date)
         c1.sc.addCartItem(cartId: 1, productId: choice, quantity: q, dateAdded: currdate)
+        print("added successfully")
     }
     
 default:print("Enter valid choice")
