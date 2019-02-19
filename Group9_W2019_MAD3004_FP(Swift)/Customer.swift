@@ -7,6 +7,14 @@
 //
 
 import Foundation
+/*var varname:datatype{
+    get{
+    return xxx
+    }
+    set{
+    exec code
+    }
+ }*/
 class Customer : User{
     var customerName:String
     var address:String
@@ -16,6 +24,7 @@ class Customer : User{
     var o = Orders()
     var si = ShippingInfo()
     var od = OrderDetails()
+    var sc = ShoppingCart()
     override init(){
         self.customerName=String()
         self.address=String()

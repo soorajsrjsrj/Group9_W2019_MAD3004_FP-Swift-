@@ -7,15 +7,54 @@
 //
 
 import Foundation
+import Darwin
 //print("Hello, World!")
+var p=[Products]()
+p.append(Products(productId: 1, productName: "Iphone XS Max 64GB", productQuantity: 10, productPrice: 1200.00))
+p.append(Products(productId: 2, productName: "Samsung Note 9 64GB", productQuantity: 5, productPrice: 949.99))
 var c1=Customer(uId: "user1", pass: "user1", lstatus: "C", cName: "UserA", address: "Qwerty1,aaaa,bbb,c", email: "user1@gmail.com", creditcInfo: "1231234545", shipInfo: "State1,Country1")
 var c2=Customer()
-print("Welcome to online shopping\nEnter choice\n1.Signup\n2.Signin")
+var c=[Customer]()
+c.append(c1)
+//do{
+print("Welcome to online shopping\nEnter choice\n1.Sign in\n2.Sign up\n3.Exit")
 let ch=readLine()
 switch(ch){
 case "1":
     print("In login")
+    //type of user needed
     c1.login(uId: "user1",pass: "user1")
     break
+
+case "2":
+    print("In signup")
+    //c2.login(uId: "user1", pass: "user1")     //test code
+    c2.register()
+case "3":
+    print("Exiting..")
+    exit(0)
+default:print("Enter valid choice")
+}//while!(ch == "1"||ch == "2"||ch == "3");
+print("Welcome User. Enter choice\n1.View items on sale\n2.Your cart\n3.Update cart\n4.Placed Orders\n5.Update shipping info")
+let cho=readLine()
+switch(cho){
+case "1":
+    print("Products available\nItem No.\t\tItem Name\t\t  Item Price")
+    for i in p{
+        print("\t\(i.productId)\t   \(i.productName)\t\t\(i.productPrice)")
+    }
+    print("select a product to add to cart. if not press 0")
+    let choice=Int(readLine()!)!
+    if(choice != 0){
+        print("Enter quantity")
+        let q=Int(readLine()!)!
+        //if(q<)        //accepting and checking quantity
+        let date=Date()
+        let formatter=DateFormatter()
+        formatter.dateFormat="dd-MM-yyyy"
+        let currdate=formatter.string(from: date)
+        c1.sc.addCartItem(cartId: 1, productId: choice, quantity: q, dateAdded: currdate)
+    }
+    
 default:print("Enter valid choice")
 }
