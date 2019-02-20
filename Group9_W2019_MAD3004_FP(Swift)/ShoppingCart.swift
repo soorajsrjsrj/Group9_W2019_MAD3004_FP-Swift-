@@ -41,6 +41,10 @@ class ShoppingCart{
         
     }
     func checkOut(){
-        
+        let date=Date()
+        let formatter=DateFormatter()
+        formatter.dateFormat="dd-MM-yyyy"
+        let currdate=formatter.string(from: date)
+        //c1.o.placeOrder(c1.customerName) //array of orderdetails under orders and checkout in customer with array of shoppingcart
     }
 }
