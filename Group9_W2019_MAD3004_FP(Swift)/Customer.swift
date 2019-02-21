@@ -21,9 +21,7 @@ class Customer : User{
     var email:String
     var creditCardInfo:String
     var shippingInfo:String
-    var o = Orders()
-    var si = ShippingInfo()
-    var od = OrderDetails()
+    var o = [Orders]()//Orders()
     var sc = ShoppingCart()
     override init(){
         self.customerName=String()
@@ -55,5 +53,29 @@ class Customer : User{
     func updateProfile(){
         
     }
-
+    func checkOut(){
+        let date=Date()
+        let sdate=Date().addingTimeInterval(5)
+        let formatter=DateFormatter()
+        formatter.dateFormat="dd-MM-yyyy"
+        let currdate=formatter.string(from: date)
+        let shipdate=formatter.string(from: sdate)
+        print("Select shipping type1.Domestic 2.International")
+        let choice=Int(readLine()!)!
+        if(choice == 1){
+            let shipCost=5
+        }
+        else{
+            let shipCost=15
+        }
+        print("Select region/province\n1.Ontario\n2.British Columbia\n3.Quebec\n4.Alberta")
+        let regchoice=Int(readLine()!)!
+        print("press 1 to confirm your order")
+        let confirm=Int(readLine()!)!
+        if(confirm == 1){
+            let or=Orders()
+            //or.placeOrder()
+            o.append(or)
+        }
+    }
 }

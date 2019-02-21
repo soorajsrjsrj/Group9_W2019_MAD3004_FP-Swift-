@@ -15,6 +15,8 @@ class Orders{
     var customerId:String
     var status:String
     var shippingId:String
+    var si = [ShippingInfo]()   //ShippingInfo()
+    var od = [OrderDetails]()//OrderDetails()
     init()
     {
         self.orderId=0
@@ -25,7 +27,7 @@ class Orders{
         self.status=String()
         self.shippingId=String()
     }
-    func placeOrder(){
+    func placeOrder(orderId:Int currDate:String,shipType:Int,shipCost:Int,regionId:Int,cartObj:[ShoppingCart]){
         
     }
 }
