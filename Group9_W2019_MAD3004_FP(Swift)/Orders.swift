@@ -27,7 +27,8 @@ class Orders{
         self.status=String()
         self.shippingId=String()
     }
-    func placeOrder(orderId:Int currDate:String,shipType:Int,shipCost:Int,regionId:Int,cartObj:[ShoppingCart]){
+    func placeOrder(orderId:Int, currDate:String, shipDate:String, custName:String, /*custId:String, shipId:Int,*/ shipType:String, shipCost:Int, regionId:Int, cartObj:[ShoppingCart]){
+        si.append(ShippingInfo(shipType: shipType, shipCost: shipCost, shipRegId: regionId))
         
     }
 }

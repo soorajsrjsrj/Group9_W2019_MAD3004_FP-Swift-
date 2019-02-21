@@ -21,8 +21,8 @@ class Customer : User{
     var email:String
     var creditCardInfo:String
     var shippingInfo:String
-    var o = [Orders]()//Orders()
-    var sc = ShoppingCart()
+    var o = [Orders]()              //array of Orders              //Orders()
+    var sc = [ShoppingCart]()      //array of ShoppingCart        //ShoppingCart()
     override init(){
         self.customerName=String()
         self.address=String()
