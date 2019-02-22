@@ -86,9 +86,9 @@ case "4":
     }
     else{
         print("Your orders are")
-        for i in c1.o{
+        //for i in c1.o{
             
-        }
+        //}
     
     }
 
