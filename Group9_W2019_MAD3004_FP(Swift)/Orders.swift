@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Orders{
+class Orders : IDisplay{
     var orderId:Int
     var dateCreated:String
     var dateShipped:String
@@ -52,5 +52,9 @@ class Orders{
         }
         print("order placed successfully.Your id is \(self.orderId)")
         //od.append(OrderDetails(cartObj: cartObj, orderId: self.orderId))
+    }
+    func display() -> String {
+        let dispString = "\(self.orderId)\t\t\(self.dateCreated)\t\t\(self.dateShipped)\t\t\(self.customerName)\t\t\(self.status)\t\t\(self.shippingId)"
+        return dispString
     }
 }

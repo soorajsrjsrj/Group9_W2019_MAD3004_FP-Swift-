@@ -58,8 +58,39 @@ case "1":
         //print("added successfully")
         //ask for repeating orders. if thats done then checkout
         c1.checkOut()
-        
     }
     
+case "2":
+    if(c1.sc.isEmpty){
+        print("Your cart is empty")
+    }
+    else{
+        print("Your cart details are:")
+        for i in c1.sc{
+            i.viewCartDetails()
+        }
+    }
+    
+case "3":
+    print("Enter cart id")
+    let cartId=Int(readLine()!)!
+    for i in c1.sc{
+        if(i.cartId == cartId){
+            i.updateQuantity()
+        }
+    }
+    
+case "4":
+    if(c1.o.isEmpty){
+        print("Your order is empty")
+    }
+    else{
+        print("Your orders are")
+        for i in c1.o{
+            
+        }
+    
+    }
+
 default:print("Enter valid choice")
 }
