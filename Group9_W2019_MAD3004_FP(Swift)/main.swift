@@ -53,7 +53,8 @@ case "1":
         let formatter=DateFormatter()
         formatter.dateFormat="dd-MM-yyyy"
         let currdate=formatter.string(from: date)
-        c1.sc.addCartItem(cartId: 1, productId: choice, quantity: q, dateAdded: currdate)
+        c1.sc.append(ShoppingCart())
+        c1.sc[c1.sc.endIndex-1].addCartItem(cartId: 1, productId: choice, quantity: q, dateAdded: currdate)
         //print("added successfully")
         //ask for repeating orders. if thats done then checkout
         c1.checkOut()
