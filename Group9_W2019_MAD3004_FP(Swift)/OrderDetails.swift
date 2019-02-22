@@ -22,6 +22,11 @@ class OrderDetails{
         self.unitCost=0.0
         self.subtotal=0.0
     }
+    //init(cartObj:[ShoppingCart],orderId:Int)
+    //{
+    //    self.orderId=orderId
+    //    self.productId=ca
+    //}
     func calcPrice(){
         self.subtotal=prod(ucost:self.unitCost,q:self.quantity);
     }

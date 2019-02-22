@@ -13,6 +13,11 @@ class ShippingInfo{
     var shippingType:String
     var shippingCost:Int
     var shippingRegionId:Int
+    var getId:Int{
+        get{
+            return shippingId
+        }
+    }
     init()
     {
         self.shippingId=0
@@ -24,6 +29,7 @@ class ShippingInfo{
         self.shippingId=Int(arc4random())
         self.shippingType=shipType
         self.shippingRegionId=shipRegId
+        self.shippingCost=shipCost
     }
     func updateShippingInfo(){
         
